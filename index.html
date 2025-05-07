@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA 抽卡游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">FIFA 抽卡游戏</h1>
+        
+        <div class="main-content">
+            <div class="card-section">
+                <div class="card-display" id="cardDisplay">
+                    <div class="empty-state">点击下方按钮抽取卡牌</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="drawButton" class="draw-button">抽取卡牌</button>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="history">抽卡历史</button>
+                    <button class="tab-button" data-tab="info">概率信息</button>
+                </div>
+                
+                <div class="tab-content active" id="historyTab">
+                    <div class="card-history" id="cardHistory">
+                        <div class="empty-history">还没有抽取过卡牌</div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="infoTab">
+                    <div class="probability-info">
+                        <h3>抽卡概率</h3>
+                        <ul>
+                            <li><span>普通 (Common)</span><span class="percentage">45%</span></li>
+                            <li><span>稀有 (Rare)</span><span class="percentage">32%</span></li>
+                            <li><span>史诗 (Epic)</span><span class="percentage">18%</span></li>
+                            <li><span>传说 (Legendary)</span><span class="percentage">5%</span></li>
+                        </ul>
+                        
+                        <h3>卡牌总数</h3>
+                        <p id="totalCards"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
